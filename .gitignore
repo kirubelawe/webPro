@@ -1,2 +1,4 @@
 dist/pages/fontawesome-free-5.12.0-web/
 .vscode/
+# Local Netlify folder
+.netlify
