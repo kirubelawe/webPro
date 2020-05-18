@@ -1,0 +1,209 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.head {
+    margin-left: 10px;
+}
+/* title */ 
+h1 {
+    color: thistle;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    background: #000;
+}
+header .burger {
+    /* display: inline-block; */
+    cursor: pointer;
+    margin: 1.7rem;
+}
+.bar1, .bar2, .bar3 {
+     width: 35px;
+     height: 3px;
+     background-color: rgb(221, 210, 210);
+     margin-bottom: 6px;
+}
+.wide_nav  {
+    margin-top: .7rem;
+}
+.wide_nav li {
+     display: inline; 
+     text-align: center; 
+    margin: 0rem 1rem 0rem 1rem;
+}
+.wide_nav li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: rgb(129, 125, 125);
+}
+.wide_nav .active {
+    color: rgb(223, 213, 213);
+} 
+nav {
+    margin-top: 1rem;
+} 
+/* Burger Icon */
+.burger {
+    display: none;
+}
+/* Background Image */
+.bg {
+    opacity: .9;
+    background-image: url(/dist/images/flock-of-birds-917494.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+main {
+    background: rgb(255, 255, 255);
+    opacity: .8;
+    height: wrap;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+main h2 {
+    font-family: sans-serif;
+    letter-spacing: .2px;
+    color: rgb(48, 41, 41);
+}
+main p {
+    padding: .5rem;
+    background-color: rgb(255, 255, 255);
+    opacity: .7;
+    color: rgb(2, 1, 8);
+    font-size: 1.3rem;
+}
+main .get_started {
+margin-top: 2rem;
+}
+main .get_started a {
+    padding: 10px 15px;
+    background-color:  rgb(68, 18, 204);
+    color: white;
+    text-decoration: none;
+    letter-spacing: .4px;
+    border-radius: 5px;
+    transition: color 500ms linear 100ms,background-color 510ms ease-out 90ms;
+}
+main .get_started a:hover {
+    color: rgb(68, 18, 204);
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 768px){
+    body {
+        overflow-x: hidden; 
+    }
+    .wide_nav {
+      position: absolute;
+      right: 0;
+      height: 30vh;
+      top: 7vh;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: 15vw;
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -o-transform: translateX(100%);
+      -ms-transfrom: translateX(100%) ;
+       transform: translateX(100%);
+
+      -webkit-transition: -webkit-transform 0.5s ease-in;
+      -moz-transition: -moz-transform 0.5s ease-in;
+      -o-transition: o-transform 0.5s ease-in;
+      -ms-transition: -ms-transfrom 0.5s ease-in;
+      transition: transform 0.5s ease-in;
+    }
+    .wide_nav li {
+        opacity: 0;
+        margin: 0px 15px 7px 0px;
+    }
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+}
+@media only screen and (min-width:768px){
+   /* header .burger {
+        display: none;
+    } */
+    /*.wide_nav {
+    display: inline-block;
+    } */
+    main {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    text-align: start;
+    }
+       main h2 {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+       }
+    main p {
+        width: 375px;
+    }
+      main .get_started{
+          align-items: center;
+          text-align: center;
+      }
+}
+.nav-active {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+      -o-transform: translateX(0%);
+      -ms-transfrom: translateX(0%);
+       transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(50px);
+        -moz-transform: translateX(50px);
+        -o-transform: translateX(50px);
+        -ms-transfrom: translateX(50px);
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        -ms-transfrom: translateX(0);
+        transform: translateX(0px);
+    }
+}
+.toogle .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px,6px);
+  transform: rotate(-45deg) translate(-4px,9px);;
+}
+.toogle .bar2 {
+    opacity: 0;
+}
+.toogle .bar3 {
+      -webkit-transform: rotate(45deg) translate(-5px,-6px);
+  transform: rotate(45deg) translate(-4px,-9px)  ;
+}
+
+.active {
+    color: rgb(223, 213, 213);
+} 
